@@ -2,33 +2,31 @@
 
 int main()
 {
-    int LA[] = {1,2,3,4,5};
+   int array [] = {1,2,3,4,5};
+   int i, j;
+   int n = 5;
+   int k =2;
 
-    
-    int n = 5;
-    int k =  3;
+   printf("The value of the original array : \n");
 
-    int i, j;
+   for (i = 0; i < n; i++)
+   {
+    printf("array[%d] = %d \n", i, array[i]);
+   }
 
-    printf("The original array elements are :\n");
+   j = k;
+   while ( j < n)
+   {
+    array[j -1] = array[j];
+    j = j + 1;
+   }
 
-    for(i = 0; i<n; i++){
-        printf("LA[%d] =%d\n", i, LA[i]);
-    }
+   n = n -1;
 
-    j =k;
+   printf("The value of the new deleted array: -\n");
 
-    while( j < n) {
-        LA[j -1] = LA[j];
-        j = j + 1;
-
-    }
-
-    n = n -1;
-
-    printf("The array elements after deletion :\n");
-
-    for( i =0; i < n; i++) {
-        printf("LA[%d] = %d \n", i, LA[i]);
-    }
+   for (i = 0; i < n; i++)
+   {
+    printf(" array[%d] = %d \n", i, array[i]);
+   }
 }
