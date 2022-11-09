@@ -12,7 +12,7 @@ let arr = [1, 2, 3,4  ,5,6,7];
 function rotateArr(arr, n, d) {
    let  temp = new Array(n);
    
-   k = 0;
+ let   k = 0;
 
    // storing the first n - d element of the arr[];
     // putting it in front of temp;
