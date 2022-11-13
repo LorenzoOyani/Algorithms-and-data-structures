@@ -90,7 +90,7 @@ double atof(char s[]) {
 
     /* support for scientific notation*/
 
-    if ( s[i] == 'e' | s[i] == 'E')
+    if ( s[i] == 'e' || s[i] == 'E')
         i++;
 
     esign = (s[i] == '-') ? -1 : 1;
