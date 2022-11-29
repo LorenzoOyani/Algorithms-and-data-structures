@@ -1,46 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+struct Node {
     int data;
-    struct Node *next;
-}Node;
-struct Node* head;
-
-void print();
-void insert(int x);
+    struct Node* next;
+};
 
 
-void insert( int x)
+void printList(struct Node* head)
 {
-  struct Node* temp = (Node*)malloc(sizeof(Node));
-    temp -> data = x;
-    temp -> next = head;
-    head = temp;
-
-}
-
-void print()
-{
-    struct Node *temp = head;
-    print("List is: \n");
-    while(temp !=NULL)
+    while(head !=NULL)
     {
-        print("%d\n", temp ->data);
-        temp = temp -> next;
+        printf( " %d ", head -> data);
+        head = head ->next;
     }
 }
 
 
-int main(void)
+int main()
 {
-    head = NULL;
-    int i, x, n;
-    printf("Howm many numbers?\n");
-    scanf ("%d\n", &n);
-    for ( i =0; i< n; i++)
-    printf("Enter the number:\n");
-    scanf("%d\n", &x);
-    insert(x);
-    print();
+    struct Node * head = NULL;
+    struct Node* second  = NULL;
+    struct Node* third = NULL;
+
+    head = (struct Node*)malloc(sizeof(struct Node));   
+    second = (struct Node*)malloc(sizeof(struct Node));   
+    third = (struct Node*)malloc(sizeof(struct Node));
+
+    head -> data = 1;
+    head -> next = second;
+
+    third -> data = 2;
+    third -> next = NULL;
+
+    printList(head);   
 }
