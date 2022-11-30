@@ -37,13 +37,15 @@ void reverseUtils(Node* curr, Node* prev, Node** head);
 
 void reverseUtils(Node* curr, Node* prev, Node** head)
 {
-    if(!curr->next){
+    
+    if(!curr -> next)
+    {
         *head = curr;
         curr -> next = prev;
         return;
     }
-    Node* next = curr ->next;
-    curr ->next = prev;
+    Node* next = curr -> next;
+    curr -> next = prev;
 
     reverseUtils(next, curr, head);
 
