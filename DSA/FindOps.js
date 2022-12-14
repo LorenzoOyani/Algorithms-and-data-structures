@@ -17,7 +17,7 @@ function FindMinOps(arr, n ){
             ans++;
         }
     }
-
+    
 }
 
 
