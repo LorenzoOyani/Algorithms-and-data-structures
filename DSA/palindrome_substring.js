@@ -19,7 +19,7 @@ function longestPalSubstr(str){
         }
     }
     // check for palindrome...
-    for(let k =0; k < (j - i) + 1; k++){
+    for(let k =0; k < (j - i + 1 ) / 2; k++){
         if(str[i +  k] != str[j - k])
             flag = 0;
     }
