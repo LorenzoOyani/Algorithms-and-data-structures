@@ -1,11 +1,14 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
+extern char *_getenv(const char *name);
+extern int _setenv(const char *name, const char *value, int overwrite);
+extern int _unsetenv(const char *name);
+extern char **environ;
 
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <errno.h>
-
 #endif
