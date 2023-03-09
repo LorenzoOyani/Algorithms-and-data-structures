@@ -35,7 +35,7 @@ int main()
         for (int j = strlen(string); j > 0; j--)
         {
             if (string[j] == '*' || string[j] == '/' || string == '+' || string[j] == '-')
-                push(string[j])
+                push(string[j]);
         }
     }
 
@@ -66,9 +66,9 @@ int main()
             else if (char_var1 == '/')
                 total_compute = compute1 / compute2;
             else if (char_var1 == '*')
-                total_compute = compute1 * compute2
+                total_compute = compute1 * compute2;
 
-                                               int_push(total_compute);
+            int_push(total_compute);
         }
     }
     printf("%d", int_pop());
@@ -77,7 +77,8 @@ int main()
 
 void push(char c)
 {
-    s.stack_top++ s.size_in_calc[stack_top++] = c;
+    s.stack_top++;
+    s.size_in_calc[++stack_top] = c;
 }
 
 void isEmpty()
@@ -90,7 +91,7 @@ void isEmpty()
     return 1;
 }
 
-void diaplay()
+void display()
 {
     int i;
     if (!isEmpty)
@@ -113,7 +114,7 @@ void int_push(int c)
     s.size_in_calc[s.stack_top] = c;
 }
 
-void pop(int c)
+void pop()
 {
     int num = s.size_in_calc[s.stack_top];
     s.stack_top--;

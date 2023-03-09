@@ -14,9 +14,10 @@ function longestPalSubstr(str){
     let n = str.length;
     for( let i = 0; i <= str.length; i++ ){
 
-        for(j = i; j <=str.length; j++ ){
+        for( let j = i; j <=str.length; j++ ){
             flag = 1;
         }
+        
     }
     // check for palindrome...
     for(let k =0; k < (j - i + 1 ) / 2; k++){

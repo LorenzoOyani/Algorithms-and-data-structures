@@ -1,21 +1,20 @@
 
 
 def mostFrequent(arr, n):
-    arr.sort()
 
-    maxcount = 1
+    max_count = 1
+    current_count = 1
     res = arr[0]
-    curr_count = 1
 
     for i in range(1, n):
         if (arr[i] == arr[i - 1]):
-            curr_count += 1
-        else:
-            curr_count = 1
+            current_count += 1
+        else: 
+            current_count = 1
 
-        if (curr_count > maxcount):
-            maxcount = curr_count
-            res = arr[i - 1]
+        if (current_count > max_count):
+            max_count = current_count 
+            res = arr[i - 1] 
 
     return res
 

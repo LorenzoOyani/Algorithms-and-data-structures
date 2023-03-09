@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include "bmp.h"
 
 //converting image to greyscale;
 void greyscale(int height, int width, RGBTRIPLE image[height][width])
@@ -103,7 +104,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             float  sum_red;
-            float sum_ blue;
+            float sum_blue;
             float sum_green;
             int counter = 0;
 
@@ -128,9 +129,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             //otherwise add to sums
 
-            sum_red += temp[i + k] [j + I].rgbtRed;
-            sum_blue += temp[i + k] [j + I].rgbtBlue;
-            sum_green += temp[ i + k] [j + I]. rgbtGreen;
+          int  sum_red += temp[i + k] [j + I].rgbtRed;
+           int  sum_blue += temp[i + k] [j + I].rgbtBlue;
+             int sum_green += temp[ i + k] [j + I]. rgbtGreen;
             counter ++;
         }
     }
